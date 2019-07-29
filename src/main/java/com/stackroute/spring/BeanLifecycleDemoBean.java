@@ -22,12 +22,12 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     //    custom init method
     @PostConstruct
     public void customInit() {
-        System.out.println("Custom Init Method ");
+        System.out.println("Custom Init Method");
     }
 
     //    custom destroy method
     @PreDestroy
     public void customDestroy() {
-        System.out.println("Custom Destroy method ");
+        System.out.println("Custom Destroy method");
     }
 }

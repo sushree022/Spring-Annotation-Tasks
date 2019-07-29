@@ -42,7 +42,6 @@ public class MovieConfig {
     //    creation of movie bean
     @Bean(name = "movie")
     @Scope("prototype")
-    @Autowired
     public Movie movie() {
         Movie newMovie = new Movie();
         return newMovie;
@@ -52,5 +51,11 @@ public class MovieConfig {
     public BeanLifecycleDemoBean lifecycleBean() {
         BeanLifecycleDemoBean bean = new BeanLifecycleDemoBean();
         return bean;
+    }
+
+    @Bean(name = "postProcessorBean")
+    public BeanPostProcessorDemoBean postProcessorBean() {
+        BeanPostProcessorDemoBean postBean = new BeanPostProcessorDemoBean();
+        return postBean;
     }
 }
