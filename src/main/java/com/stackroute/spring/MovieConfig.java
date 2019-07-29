@@ -47,4 +47,10 @@ public class MovieConfig {
         Movie newMovie = new Movie();
         return newMovie;
     }
+    @Bean(name= "lifeCycleBean")
+    public BeanLifecycleDemoBean lifecycleBean()
+    {
+        BeanLifecycleDemoBean bean= new BeanLifecycleDemoBean();
+        return bean;
+    }
 }
