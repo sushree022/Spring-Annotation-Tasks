@@ -2,6 +2,7 @@ package com.stackroute.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,13 +29,25 @@ public class MovieConfig {
         return actor2;
     }
 
+    //    set details of third actor
+    @Bean(name = "actor3")
+    public Actor movieActor3() {
+        Actor actor3 = new Actor();
+        actor3.setName("Siddharth");
+        actor3.setGender("Male");
+        actor3.setAge(35);
+        return actor3;
+    }
+
     //    creation of movie bean
-    @Bean(name = "movie")
-    public Movie movie1() {
+    @Bean(name = "movie1")
+    @Scope("prototype")
+    public Movie movie() {
         Movie newMovie = new Movie();
         List<Actor> actorList = new ArrayList<>();
         actorList.add(movieActor1());
         actorList.add(movieActor2());
+        actorList.add(movieActor3());
         newMovie.setActor(actorList);
         return newMovie;
     }
