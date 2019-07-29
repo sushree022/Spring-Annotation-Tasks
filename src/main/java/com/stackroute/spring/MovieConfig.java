@@ -42,7 +42,6 @@ public class MovieConfig {
     //    creation of movie bean
     @Bean(name = "movie")
     @Scope("prototype")
-    @Autowired
     public Movie movie() {
         Movie newMovie = new Movie();
         return newMovie;
