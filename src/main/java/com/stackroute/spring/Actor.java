@@ -9,7 +9,6 @@ public class Actor {
     private int age;
 
     //    constructor
-    @Autowired
     public Actor(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
