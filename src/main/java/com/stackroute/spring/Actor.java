@@ -1,12 +1,24 @@
 package com.stackroute.spring;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Actor {
     //    declaration of variables
     private String name;
     private String gender;
     private int age;
+
+    //    constructor
+    @Autowired
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+
+    public Actor() {
+
+    }
 
     //    setters and getters
     public String getName() {

@@ -2,21 +2,19 @@ package com.stackroute.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-
 import java.util.List;
 
 public class Movie {
+    @Autowired
     //    instance of Actor class created
     private List<Actor> actor;
 
-    @Autowired
-    //    constructor
+    //    constructors
     public Movie(List<Actor> actor) {
         this.actor = actor;
     }
 
     public Movie() {
-
     }
 
     //    getters and setters
@@ -28,7 +26,8 @@ public class Movie {
         this.actor = actor;
     }
 
-    //    to String method over
+    //    to String method over ridden
+
     @Override
     public String toString() {
         return "Movie{" +
