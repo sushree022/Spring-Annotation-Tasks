@@ -34,7 +34,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("Bean factory is set: "+beanFactory);
+        System.out.println("Bean factory is set: " + beanFactory);
 
     }
 
@@ -46,7 +46,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("Application context is set: "+applicationContext);
+        System.out.println("Application context is set: " + applicationContext);
 
     }
     //    to String method over ridden
